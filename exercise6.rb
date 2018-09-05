@@ -6,9 +6,10 @@ go_home=false
 while go_home==false
   puts "Would you like to walk, run or go home?"
   travel_method=gets.chomp
-  # If they walk, the total distance should go up by one
+  #  Abort loop if going home
   if travel_method == "go home"
       go_home = true
+  # If they walk, the total distance should go up by one
   elsif travel_method == "walk"
     distance +=1
     puts "Distance from home is #{distance} km."
@@ -16,6 +17,7 @@ while go_home==false
   elsif travel_method == "run"
     distance +=5
     puts "Distance from home is #{distance} km."
+    # Weird command
   else
     puts "This command is not recognized by the program"
   end
